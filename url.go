@@ -2,7 +2,8 @@ package luis
 
 const (
 	//LuisURL :Basic URL (V1.0)
-	LuisURL string = "https://westus.api.cognitive.microsoft.com/luis/api/v2.0/apps/"
+	//LuisURL string = "https://westus.api.cognitive.microsoft.com/luis/api/v2.0/apps/"
+	LuisURL string = "https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/"
 	// {ap/pId}/versions/{versionId}/example
 
 	//LuisAPIIntents :API Intent List
@@ -33,7 +34,7 @@ func getActionChannels(apid string, versionid string) string {
 }
 
 func getPredictURL(apid string, versionid string) string {
-	return "https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/" + apid
+	return LuisURL + apid
 }
 
 func getTrainURL(apid string, versionid string) string {
